@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter Number a : ");
+    scanf("%d", &a);
+    printf("Enter Number b : ");
+    scanf("%d", &b);
+    c = a * b;
+    printf("%d x %d = %d", a, b, c);
+    return 0;
+}
+
+/*================== Output ==================
+Enter Number a : 3
+Enter Number b : 4
+3 x 4 = 12
+*/
