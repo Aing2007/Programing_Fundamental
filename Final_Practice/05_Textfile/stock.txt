@@ -1,0 +1,3 @@
+P01 Pen 50 12.50
+P02 Notebook 20 35.00
+P03 Eraser 5 8.00
