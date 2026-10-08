@@ -19,7 +19,6 @@ void primecheck(int num)
     if (Isprime == 1)
         printf("%4d", num);
 }
-
 int main()
 {
     int num1, num2;
