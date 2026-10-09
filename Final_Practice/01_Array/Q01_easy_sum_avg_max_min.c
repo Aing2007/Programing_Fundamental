@@ -42,10 +42,32 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
+    int n, Max, Min, sum = 0;
 
+    printf("Input:\n");
+    scanf("%d", &n);
+    int *numPtr = malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        scanf(" %d", &numPtr[i]);
+        sum += numPtr[i];
+    }
+    Max = numPtr[0];
+    Min = numPtr[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (Max < numPtr[i])
+            Max = numPtr[i];
+        if (Min > numPtr[i])
+            Min = numPtr[i];
+    }
+    printf("Output:\n");
+    printf("Sum : %d\n", sum);
+    printf("Average : %.2f\n", (float)sum / (float)n);
+    printf("Max : %d\n", Max);
+    printf("Min : %d\n", Min);
     return 0;
 }

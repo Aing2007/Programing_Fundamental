@@ -40,10 +40,41 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
+    int n, *numPtr;
+    printf("Input:\n");
+    scanf("%d", &n);
+    numPtr = malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        scanf(" %d", &numPtr[i]);
+    }
+    for (int j = 1; j < n; j++)
+    {
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (numPtr[i] > numPtr[i + 1])
+            {
+                int temp = numPtr[i + 1];
+                numPtr[i + 1] = numPtr[i];
+                numPtr[i] = temp;
+            }
+        }
+    }
+    int count = 1, Number = numPtr[0];
+    for (int i = 1; i <= n; i++)
+    {
+        if (numPtr[i] == Number)
+            count++;
+        else if (numPtr[i] != Number)
+        {
+            printf("%d : %d\n", Number, count);
+            count = 1;
+            Number = numPtr[i];
+        }
+    }
 
     return 0;
 }

@@ -40,10 +40,48 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
+    int n, *numPtr;
+    printf("Input :");
+    scanf("%d", &n);
+    numPtr = malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        scanf(" %d", &numPtr[i]);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (numPtr[j] > numPtr[j + 1])
+            {
+                int temp = numPtr[j + 1];
+                numPtr[j + 1] = numPtr[j];
+                numPtr[j] = temp;
+            }
+        }
+    }
+    float Mean = 0.00;
+    int positionL = 0, positionR = 0;
+    if (n % 2 == 0)
+    {
+        positionL = n / 2;
+        positionR = (n / 2) + 1;
+        Mean = (float)(numPtr[positionL - 1] + numPtr[positionR - 1]) / 2;
+    }
+    else if (n % 2 != 0)
+    {
+        Mean = numPtr[((n - 1) / 2)];
+    }
 
+    printf("Output:\n");
+    printf("Sorted: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", numPtr[i]);
+    }
+    printf("\nMean: %.2f", Mean);
     return 0;
 }

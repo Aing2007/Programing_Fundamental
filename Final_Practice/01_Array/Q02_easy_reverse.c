@@ -42,10 +42,27 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int n, *numPtr;
+    printf("Input:\n");
+    scanf("%d", &n);
+    numPtr = malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        scanf(" %d", &numPtr[i]);
+    }
+    for (int i = 1; i <= (int)(n / 2); i++)
+    {
+        int temp = numPtr[i - 1];
+        numPtr[i - 1] = numPtr[n - i];
+        numPtr[n - i] = temp;
+    }
+    printf("\nOutput:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", numPtr[i]);
+    }
     return 0;
 }
