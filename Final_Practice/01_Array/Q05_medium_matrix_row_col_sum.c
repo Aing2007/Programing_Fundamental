@@ -38,10 +38,39 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int row, col;
+    printf("Input:\n");
+    scanf("%d %d", &row, &col);
+    int Metrix[row][col];
+    for (int r = 0; r < row; r++)
+    {
+        for (int c = 0; c < col; c++)
+        {
+            scanf("%d", &Metrix[r][c]);
+        }
+    }
+    printf("Output:\n");
+    int Sumrow, Sumcol;
+    for (int r = 0; r < row; r++)
+    {
+        Sumrow = 0;
+        for (int c = 0; c < col; c++)
+        {
+            Sumrow += Metrix[r][c];
+        }
+        printf("row %d = %d \n", r + 1, Sumrow);
+    }
+    for (int c = 0; c < col; c++)
+    {
+        Sumcol = 0;
+        for (int r = 0; r < row; r++)
+        {
+            Sumcol += Metrix[r][c];
+        }
+        printf("col %d = %d \n", c + 1, Sumcol);
+    }
     return 0;
 }
