@@ -43,7 +43,36 @@
 
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    char letter[100];
+    int Vowels = 0, Consonants = 0, Digits = 0, Spaces = 0;
+    printf("Input: \n");
+    fgets(letter, 100, stdin);
+    for (int i = 0; letter[i] != '\0'; i++)
+    {
+        if ((letter[i] < 'Z' && letter[i] > 'A') || (letter[i] < 'z' && letter[i] > 'a'))
+        {
+            Consonants++;
+        }
+        if ((letter[i] == 'A' || letter[i] == 'E' ||
+             letter[i] == 'I' || letter[i] == 'O' ||
+             letter[i] == 'U') ||
+            (letter[i] == 'a' ||
+             letter[i] == 'e' || letter[i] == 'i' ||
+             letter[i] == 'o' || letter[i] == 'u'))
+        {
+            Vowels++;
+        }
+        if (letter[i] >= 48 && letter[i] <= 57)
+        {
+            Digits++;
+        }
+        if (letter[i] == ' ')
+            Spaces++;
+    }
+    printf("Output:\n");
+    printf("Vowels : %d \n", Vowels);
+    printf("Consonants : %d \n", Consonants - Vowels);
+    printf("Digits : %d \n", Digits);
+    printf("Space : %d \n", Spaces);
     return 0;
 }
