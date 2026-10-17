@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 FILE *fp;
 char name[20], surname[20];
@@ -7,13 +8,12 @@ int main()
 {
     char ch, Dis;
     fp = fopen("../Temp/DataRecord.txt", "r");
-    if (fp != NULL) // ถ้าเปิดไฟล์ได้
+    if (fp != NULL)
     {
-
         printf("Can open file (read)\n");
-        printf("Display File Data => Insert 'D' : \n");
-        scanf("%c", &Dis);
-        if (Dis == 'D')
+        printf("Display File Data => Insert 'D' : \n"); // ถ้าต้องการแสดงเนื้อหา ให้พิมพ์ "D"
+        scanf(" %c", &Dis);
+        if (Dis == 'D') // ถ้า input = D ให้ทำการแสดงข้อมูลในไฟล์
         {
             printf("-----------------------------------\n");
             printf("|         Data in file            |\n");
@@ -25,6 +25,8 @@ int main()
                 ch = getc(fp);
             }
             printf("-----------------------------------\n");
+            if (!fclose(fp))
+                printf("\nClose File\n");
         }
         else
         {
