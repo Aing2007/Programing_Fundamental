@@ -33,7 +33,18 @@
 
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    struct Data
+    {
+        char name[50];
+        int ID;
+        int score;
+    } Student;
+    gets(Student.name);
+    scanf("%d", &Student.ID);
+    scanf("%d", &Student.score);
+    printf("Output :\n");
+    printf("%s\n", Student.name);
+    printf("%d\n", Student.ID);
+    printf("%d\n", Student.score);
     return 0;
 }

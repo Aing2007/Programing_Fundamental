@@ -47,45 +47,27 @@
  * ==============================================================
  */
 #include <stdio.h>
-
-int main(void)
+void InputMatrix(int num, int row, int col, int Matrix[2][10][10])
 {
-    int row1, col1, row2, col2;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            scanf("%d ", &Matrix[num][i][j]);
+        }
+    }
+}
+int main()
+{
+    int row1, col1, row2, col2, Matrix[2][10][10] = {0};
     printf("Input :\n");
+
     scanf("%d %d", &row1, &col1);
-    int Matrix1[row1][col1];
-    for (int i = 0; i < row1; i++)
-    {
-        for (int j = 0; j < col1; j++)
-        {
-            scanf("%d ", &Matrix1[i][j]);
-        }
-    }
+    InputMatrix(0, row1, col1, Matrix);
+
     scanf("%d %d", &row2, &col2);
-    int Matrix2[row2][col2];
-    for (int i = 0; i < row2; i++)
-    {
-        for (int j = 0; j < col2; j++)
-        {
-            scanf("%d ", &Matrix2[i][j]);
-        }
-    }
-    if (col1 != row2)
-    {
-        printf("Connot multipy !!!!");
-        return 0;
-    }
-    else
-    {
-        for (int n = 0; n < 2; n++)
-        {
-            for (int x = 0; x < 2; n++)
-            {
-                for (int x = 0; x < 2; n++)
-                {
-                }
-            }
-        }
-    }
+    InputMatrix(1, row2, col2, Matrix);
+
+    printf("\n\n = %d", Matrix[0][0][0]);
     return 0;
 }

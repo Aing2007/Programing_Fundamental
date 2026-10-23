@@ -38,10 +38,24 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+int findMax(int, int);
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int num1, num2, num3;
+    printf("num 1:");
+    scanf("%d", &num1);
+    printf("num 2:");
+    scanf("%d", &num2);
+    printf("num 3:");
+    scanf("%d", &num3);
+    int result = findMax(num1, num2);
+    printf("%d", findMax(num3, result));
     return 0;
+}
+int findMax(int a, int b)
+{
+    int Max = a;
+    if (Max < b)
+        Max = b;
+    return Max;
 }

@@ -38,10 +38,27 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int *num, n;
+    scanf("%d", &n);
+    num = malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", num + i);
+    }
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", *(num + i));
+        sum += *(num + i);
+    }
+    printf("\n");
+    printf("sum = %d \n", sum);
+    for (int i = n - 1; i >= 0; i--)
+    {
+        printf("%d ", *(num + i));
+    }
     return 0;
 }

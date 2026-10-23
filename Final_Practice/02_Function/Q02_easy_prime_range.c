@@ -35,10 +35,33 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+int Isprime(int);
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int num1, num2;
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+    for (int i = num1; i < num2; i++)
+    {
+        if (Isprime(i) == 1)
+            printf("%d ", i);
+    }
     return 0;
+}
+int Isprime(int n)
+{
+    int Isprime = 1;
+    if (n < 2 || n % 2 == 0)
+        return 0;
+    if (n == 2)
+        return 1;
+    for (int i = 3; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            Isprime = 0;
+            return Isprime;
+        }
+    }
+    return Isprime;
 }

@@ -26,11 +26,42 @@
  *
  * ==============================================================
  */
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int a, b, *aPt, *bPt, *temp;
+//     scanf("%d", &a);
+//     scanf("%d", &b);
+//     aPt = &a;
+//     bPt = &b;
+//     printf("Before : a = %d | b = %d\n", a, b);
+//     temp = aPt;
+//     *aPt = *bPt;
+//     *bPt = *temp;
+//     printf("After : a = %d | b = %d", a, b);
+//     return 0;
+// }
+
 #include <stdio.h>
 
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
+    int a, b, *aPt, *bPt, *temp;
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+
+    aPt = &a;
+    bPt = &b;
+
+    printf("Before : a = %d | b = %d\n", a, b);
+
+    temp = aPt;
+    *aPt = *bPt;
+    *bPt = *temp;
+
+    printf("After : a = %d | b = %d\n", a, b);
 
     return 0;
 }

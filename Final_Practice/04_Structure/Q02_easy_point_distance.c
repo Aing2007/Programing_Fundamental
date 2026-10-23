@@ -32,10 +32,18 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <math.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    struct P
+    {
+        int x1;
+        int x2;
+        int y1;
+        int y2;
+    } point;
+    scanf("%d %d %d %d", &point.x1, &point.y1, &point.x2, &point.y2);
+    float dist = sqrt(((point.y2 - point.y1) * (point.y2 - point.y1)) + ((point.x2 - point.x1) * (point.x2 - point.x1)));
+    printf("Dist : %.2f", dist);
     return 0;
 }

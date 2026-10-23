@@ -42,10 +42,31 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+long long fact(int);
+int fibo(int);
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int num;
+    scanf("%d", &num);
+    printf("fact : %lld\n", fact(num));
+    printf("fibo : %d", fibo(num - 1));
     return 0;
+}
+long long fact(int n)
+{
+    int Fac = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        Fac *= i;
+    }
+    return Fac;
+}
+int fibo(int n)
+{
+    int temp = 1;
+    for (int i = 0; i <= n; i++)
+    {
+        temp += i;
+    }
+    return temp;
 }

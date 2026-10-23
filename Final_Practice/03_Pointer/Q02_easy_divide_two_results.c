@@ -31,10 +31,17 @@
  * ==============================================================
  */
 #include <stdio.h>
-
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    int a, b, num, *p;
+    float *r, n;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    num = a / b;
+    n = (float)a / (float)b;
+    r = &n;
+    p = &num;
+    printf("%d\n", *p);
+    printf("%.2f", *r - *p);
     return 0;
 }
