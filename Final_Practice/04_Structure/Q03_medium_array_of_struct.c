@@ -37,10 +37,36 @@
  * ==============================================================
  */
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(void)
 {
-    /* เขียนคำตอบของคุณที่นี่ */
-
+    struct data
+    {
+        char name;
+        int potin;
+    };
+    int n;
+    printf("input number :");
+    scanf("%d", &n);
+    struct data *s = malloc(n * sizeof(struct data));
+    int Max, sum = 0, who;
+    for (int i = 0; i < n; i++)
+    {
+        printf("\ninput [%d] Data : ", i + 1);
+        scanf(" %c %d", &s[i].name, &s[i].potin);
+        if (Max < s[i].potin)
+        {
+            Max = s[i].potin;
+            who = i;
+        }
+        if (i == 0)
+        {
+            Max = s[0].potin;
+            who = 0;
+        }
+        sum += s[i].potin;
+    }
+    printf("Max = %c : %d\n", s[who].name, s[who].potin);
+    printf("avg : %.2f", (float)sum / n);
     return 0;
 }
