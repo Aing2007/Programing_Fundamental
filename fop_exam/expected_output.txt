@@ -1,0 +1,35 @@
+=== Student List (10) ===
+ID     Name                   S1     S2     S3     Avg   Grade
+6401   Somchai Jaidee       78.0   85.5   90.0   84.50   A
+6402   Malee Srisuk         55.0   62.5   48.0   55.17   D
+6403   Preecha Wongsa       92.0   88.0   95.5   91.83   A
+6404   Nattaya Boonmee      45.0   38.5   50.0   44.50   F
+6405   Anan Kittisak        70.5   66.0   74.0   70.17   B
+6406   Supaporn Chai        81.0   79.5   84.0   81.50   A
+6407   Kritsada Pong        60.0   58.5   63.0   60.50   C
+6408   Wipada Meesuk        88.5   91.0   79.0   86.17   A
+6409   Thanakorn Dee        35.0   42.0   30.5   35.83   F
+6410   Rattana Suwan        73.0   77.5   69.0   73.17   B
+
+Best student: Preecha Wongsa (91.83)
+
+=== Grade Summary ===
+A : 4
+B : 2
+C : 1
+D : 1
+F : 2
+
+=== Ranking ===
+ 1. 6403   Preecha Wongsa       92.0   88.0   95.5   91.83   A
+ 2. 6408   Wipada Meesuk        88.5   91.0   79.0   86.17   A
+ 3. 6401   Somchai Jaidee       78.0   85.5   90.0   84.50   A
+ 4. 6406   Supaporn Chai        81.0   79.5   84.0   81.50   A
+ 5. 6410   Rattana Suwan        73.0   77.5   69.0   73.17   B
+ 6. 6405   Anan Kittisak        70.5   66.0   74.0   70.17   B
+ 7. 6407   Kritsada Pong        60.0   58.5   63.0   60.50   C
+ 8. 6402   Malee Srisuk         55.0   62.5   48.0   55.17   D
+ 9. 6404   Nattaya Boonmee      45.0   38.5   50.0   44.50   F
+10. 6409   Thanakorn Dee        35.0   42.0   30.5   35.83   F
+
+Saved top 3 to top3.dat
