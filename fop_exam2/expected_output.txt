@@ -1,0 +1,15 @@
+Read 8 students
+
+ID     Name          Midterm    Final    Total
+1001   Somchai          32.0     45.0     77.0
+1002   Malee            20.0     22.0     42.0
+1003   Preecha          38.0     55.5     93.5
+1004   Nattaya          15.0     20.0     35.0
+1005   Anan             28.0     30.5     58.5
+1006   Supaporn         35.0     41.0     76.0
+1007   Kritsada         25.0     24.0     49.0
+1008   Wipada           30.0     52.5     82.5
+
+Top student: Preecha (93.5)
+Average total: 64.19
+Passed: 5 / 8
